@@ -8,6 +8,7 @@ export type MessageVars = {
   description: string | null;
   value: unknown;
   path: string;
+  documentationUrl: string | null;
 };
 
 export type MessageInterpolator = (str: string, values: MessageVars) => string;

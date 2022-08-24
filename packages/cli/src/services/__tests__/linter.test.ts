@@ -55,6 +55,7 @@ describe('Linter service', () => {
     expect(results).toEqual([
       {
         code: 'defined-name',
+        documentationUrl: null,
         message: '"name" property must be truthy',
         path: ['0', 'name'],
         range: {
@@ -72,6 +73,7 @@ describe('Linter service', () => {
       },
       {
         code: 'defined-name',
+        documentationUrl: null,
         message: '"name" property must be truthy',
         path: ['1', 'name'],
         range: {
@@ -109,6 +111,7 @@ describe('Linter service', () => {
         return expect(run('lint missing-stoplight-info-document.json')).resolves.toEqual([
           {
             code: 'info-matches-stoplight',
+            documentationUrl: null,
             message: 'Info must contain Stoplight',
             path: ['info', 'title'],
             range: expect.any(Object),
@@ -129,6 +132,7 @@ describe('Linter service', () => {
     return expect(run(['lint', ...documents].join(' '))).resolves.toEqual([
       {
         code: 'info-matches-stoplight',
+        documentationUrl: null,
         message: 'Info must contain Stoplight',
         path: ['info', 'title'],
         range: expect.any(Object),
@@ -137,6 +141,7 @@ describe('Linter service', () => {
       },
       {
         code: 'info-matches-stoplight',
+        documentationUrl: null,
         message: 'Info must contain Stoplight',
         path: ['info', 'title'],
         range: expect.any(Object),
@@ -176,6 +181,7 @@ describe('Linter service', () => {
       return expect(run(`lint ${documents}`)).resolves.toEqual([
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: ['info', 'title'],
           range: expect.any(Object),
@@ -184,6 +190,7 @@ describe('Linter service', () => {
         },
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: ['info', 'title'],
           range: expect.any(Object),
@@ -197,6 +204,7 @@ describe('Linter service', () => {
       return expect(run(`lint } ${documents.replace(/\//g, '\\')}`)).resolves.toEqual([
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: ['info', 'title'],
           range: expect.any(Object),
@@ -205,6 +213,7 @@ describe('Linter service', () => {
         },
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: ['info', 'title'],
           range: expect.any(Object),
@@ -368,6 +377,7 @@ describe('Linter service', () => {
       return expect(run(`lint http://foo.local/openapi`)).resolves.toEqual([
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: ['info', 'title'],
           range: expect.any(Object),
@@ -521,6 +531,7 @@ describe('Linter service', () => {
       expect(await run(`lint --resolver ${resolver} ${document}`)).toEqual([
         {
           code: 'info-matches-stoplight',
+          documentationUrl: null,
           message: 'Info must contain Stoplight',
           path: [],
           range: expect.any(Object),

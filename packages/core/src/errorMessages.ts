@@ -54,6 +54,7 @@ export const formatResolverErrors = (document: IDocument, diagnostics: ResolveEr
       severity: DiagnosticSeverity.Error,
       range,
       ...(source !== null ? { source } : null),
+      documentationUrl: error.documentationUrl,
     };
   });
 };

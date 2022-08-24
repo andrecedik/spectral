@@ -78,6 +78,7 @@ describe('linter', () => {
     ).resolves.toEqual([
       {
         code: 'example',
+        documentationUrl: null,
         message: 'Key must contains letters only',
         path: ['properties', '@foo'],
         range: expect.any(Object),
@@ -266,6 +267,7 @@ describe('linter', () => {
     expect(await spectral.run(document)).toEqual([
       {
         code: 'rule',
+        documentationUrl: null,
         message: '"string" must match the pattern "array"',
         path: ['paths', 'content', 'application/json;charset=utf-8', 'schema', 'type'],
         range: {
@@ -461,6 +463,7 @@ describe('linter', () => {
     expect(result).toEqual([
       {
         code: 'unrecognized-format',
+        documentationUrl: '',
         message: 'The provided document does not match any of the registered formats [oas2, oas3]',
         path: [],
         range: {
@@ -1317,6 +1320,7 @@ responses:: !!foo
     expect(results).toEqual([
       {
         code: 'falsy-foo',
+        documentationUrl: null,
         message: '"foo" property must be falsy',
         path: ['0', 'foo'],
         range: expect.any(Object),

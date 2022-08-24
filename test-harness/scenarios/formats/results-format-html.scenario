@@ -154,7 +154,7 @@ info:
 <table>
     <tbody>
     <tr class="bg-warning" data-group="f-0">
-    <th colspan="4">
+    <th colspan="6">
         [+] {document}
         <span>3 problems (0 errors, 3 warnings, 0 infos, 0 hints)</span>
     </th>

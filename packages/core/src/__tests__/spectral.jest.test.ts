@@ -36,6 +36,7 @@ describe('Spectral', () => {
     expect(results).toEqual([
       {
         code: 'requires-type',
+        documentationUrl: null,
         message: '"empty.type" property must be truthy',
         path: ['empty'],
         range: {
@@ -53,6 +54,7 @@ describe('Spectral', () => {
       },
       {
         code: 'invalid-ref',
+        documentationUrl: undefined,
         message: 'EISDIR: illegal operation on a directory, read',
         path: ['empty', '$ref'],
         range: {
@@ -70,6 +72,7 @@ describe('Spectral', () => {
       },
       {
         code: 'requires-type',
+        documentationUrl: null,
         message: '"allOf.type" property must be truthy',
         path: ['allOf'],
         range: {

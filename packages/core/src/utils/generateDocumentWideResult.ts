@@ -8,6 +8,7 @@ export const generateDocumentWideResult = (
   message: string,
   severity: DiagnosticSeverity,
   code: string | number,
+  documentationUrl: string,
 ): IRuleResult => {
   return {
     range: document.getRangeForJsonPath([], true) ?? Document.DEFAULT_RANGE,
@@ -16,5 +17,6 @@ export const generateDocumentWideResult = (
     severity,
     ...(document.source !== null ? { source: document.source } : null),
     path: [],
+    documentationUrl,
   };
 };

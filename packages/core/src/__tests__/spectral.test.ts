@@ -85,6 +85,7 @@ describe('spectral', () => {
             range: expect.any(Object),
             severity: DiagnosticSeverity.Error,
             source,
+            documentationUrl: null,
           },
         ]);
       });

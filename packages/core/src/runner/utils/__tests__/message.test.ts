@@ -10,6 +10,7 @@ describe('message util', () => {
         path: '',
         description: null,
         value: void 0,
+        documentationUrl: null,
       }),
     ).toEqual('oops... "description" is missing;error: expected property to be truthy');
   });
@@ -25,6 +26,7 @@ describe('message util', () => {
         value: {
           param: 'test',
         },
+        documentationUrl: null,
       }),
     ).toEqual('Property "test" is missing. Path: TEST');
   });
@@ -38,6 +40,7 @@ describe('message util', () => {
         path: '',
         description: null,
         value,
+        documentationUrl: null,
       }),
     ).toEqual(`Value must not equal ${value}`);
   });
@@ -51,6 +54,7 @@ describe('message util', () => {
         path: '',
         description: null,
         value: void 0,
+        documentationUrl: null,
       }),
     ).toEqual('foofoobazfoofoo');
   });
@@ -64,6 +68,7 @@ describe('message util', () => {
         path: '',
         description: null,
         value: void 0,
+        documentationUrl: null,
       }),
     ).toEqual('missing :(');
   });

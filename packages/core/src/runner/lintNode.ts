@@ -94,6 +94,7 @@ function processTargetResults(
       path: printPath(path, PrintStyle.EscapedPointer),
       description: rule.description,
       value,
+      documentationUrl: rule.documentationUrl,
     };
 
     const resultMessage = message(result.message, vars);
@@ -110,6 +111,7 @@ function processTargetResults(
       severity,
       ...(source !== null ? { source } : null),
       range,
+      documentationUrl: rule.documentationUrl,
     });
   }
 }

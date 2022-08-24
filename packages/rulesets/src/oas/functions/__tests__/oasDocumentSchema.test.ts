@@ -43,6 +43,7 @@ describe('oasDocumentSchema', () => {
           path: ['securityDefinitions', 'basic'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas2-schema',
         },
       ]);
     });
@@ -86,6 +87,7 @@ describe('oasDocumentSchema', () => {
           path: ['paths', '/user', 'get', 'parameters', '0', 'schema', 'type'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas3-schema',
         },
       ]);
     });
@@ -124,6 +126,7 @@ describe('oasDocumentSchema', () => {
           path: ['components', 'securitySchemes', 'basic'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas3-schema',
         },
         {
           code: 'oas3-schema',
@@ -131,6 +134,7 @@ describe('oasDocumentSchema', () => {
           path: ['components', 'securitySchemes', 'basic', 'foo'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas3-schema',
         },
       ]);
     });
@@ -161,6 +165,7 @@ describe('oasDocumentSchema', () => {
           path: ['paths', '/user', 'get', 'responses', '200'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas3-schema',
         },
       ]);
     });

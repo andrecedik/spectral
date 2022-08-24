@@ -47,6 +47,7 @@ describe('asyncApi2DocumentSchema', () => {
           path: ['info'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/asyncapi-rules.md#asyncapi-schema',
         },
       ]);
     });
@@ -135,6 +136,7 @@ describe('asyncApi2DocumentSchema', () => {
           path: ['channels', '/user/signedup', 'servers', '0'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/asyncapi-rules.md#asyncapi-schema',
         },
         {
           code: 'asyncapi-schema',
@@ -142,6 +144,7 @@ describe('asyncApi2DocumentSchema', () => {
           path: ['channels', '/user/signedup', 'servers', '2'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/asyncapi-rules.md#asyncapi-schema',
         },
       ]);
     });
@@ -188,6 +191,7 @@ describe('asyncApi2DocumentSchema', () => {
           path: ['components', 'servers', 'kafka'],
           severity: DiagnosticSeverity.Error,
           range: expect.any(Object),
+          documentationUrl: 'https://meta.stoplight.io/docs/spectral/docs/reference/asyncapi-rules.md#asyncapi-schema',
         },
       ]);
     });

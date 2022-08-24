@@ -109,6 +109,7 @@ export class Spectral {
         .join(', ')}]`,
       DiagnosticSeverity.Warning,
       'unrecognized-format',
+      '',
     );
   }
 
